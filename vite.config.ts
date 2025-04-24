@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  base: "/",
+  base: "/aesthetic-project-space/", // Update this to your repository name
   plugins: [
     react(),
     mode === 'development' &&
