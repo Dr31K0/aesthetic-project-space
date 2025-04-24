@@ -1,4 +1,3 @@
-
 const projects = [
   {
     id: 1,
@@ -22,12 +21,12 @@ const projects = [
 
 const ProjectGrid = () => {
   return (
-    <section id="work" className="py-20 bg-black">
+    <section id="work" className="py-32 bg-black">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-16 text-center tracking-tight">
           Selected Works
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {projects.map((project) => (
             <a
               key={project.id}
@@ -37,12 +36,12 @@ const ProjectGrid = () => {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-50"
+                className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 opacity-40 group-hover:opacity-60"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
-                <div className="text-center text-white opacity-100">
-                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                  <p className="text-sm text-white/70">{project.description}</p>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center transition-transform duration-500 transform group-hover:-translate-y-2">
+                  <h3 className="text-2xl font-bold mb-3 text-white">{project.title}</h3>
+                  <p className="text-lg text-white/70">{project.description}</p>
                 </div>
               </div>
             </a>
@@ -54,4 +53,3 @@ const ProjectGrid = () => {
 };
 
 export default ProjectGrid;
-

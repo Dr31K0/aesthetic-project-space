@@ -7,10 +7,10 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed w-full bg-black/80 backdrop-blur-sm z-50 py-4 border-b border-white/10">
+    <nav className="fixed w-full bg-black/80 backdrop-blur-sm z-50 py-6">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
-          <a href="/" className="text-xl font-semibold text-white">
+          <a href="/" className="text-2xl font-light tracking-wider text-white hover:text-white/80 transition-colors">
             Portfolio
           </a>
           
@@ -23,19 +23,19 @@ const Navigation = () => {
           </Button>
 
           <div className={`${isOpen ? 'block' : 'hidden'} lg:block`}>
-            <ul className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-center">
+            <ul className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center text-lg">
               <li>
-                <a href="/" className="text-white hover:text-white/70 transition-colors">
+                <a href="/" className="text-white/70 hover:text-white transition-colors duration-300">
                   Work
                 </a>
               </li>
               <li>
-                <a href="/about" className="text-white hover:text-white/70 transition-colors">
+                <a href="/about" className="text-white/70 hover:text-white transition-colors duration-300">
                   About
                 </a>
               </li>
               <li>
-                <a href="/contact" className="text-white hover:text-white/70 transition-colors">
+                <a href="/contact" className="text-white/70 hover:text-white transition-colors duration-300">
                   Contact
                 </a>
               </li>
@@ -48,4 +48,3 @@ const Navigation = () => {
 };
 
 export default Navigation;
-
