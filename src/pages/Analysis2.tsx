@@ -14,7 +14,7 @@ const Analysis2 = () => {
             description="Audemars Piguet fuses heritage with innovation, crafting bold, prestigious timepieces that reflect individuality and timeless style."
           />
           <div className="flex items-center justify-center h-[70vh]">
-            <div className="rounded-3xl overflow-hidden" style={{ aspectRatio: '1 / 1.414' }}>
+            <div className="rounded-3xl overflow-hidden shadow-lg" style={{ aspectRatio: '1 / 1.414' }}>
               <img
                 src="/lovable-uploads/dbb82eb7-f403-4526-ae4c-6bae1f8de206.png"
                 alt="Audemars Piguet Analysis"
