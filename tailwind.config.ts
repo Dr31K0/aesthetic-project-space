@@ -20,40 +20,23 @@ export default {
     },
     extend: {
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
+        background: "#000000",
+        foreground: "#FFFFFF",
         primary: {
-          DEFAULT: "#9b87f5",
-          foreground: "#FFFFFF",
+          DEFAULT: "#FFFFFF",
+          foreground: "#000000",
         },
         secondary: {
-          DEFAULT: "#1A1F2C",
+          DEFAULT: "#333333",
           foreground: "#FFFFFF",
         },
+        border: "#666666",
       },
       fontFamily: {
-        playfair: ["Playfair Display", "serif"],
-        sans: ["Inter", "sans-serif"],
-      },
-      keyframes: {
-        "fade-up": {
-          "0%": {
-            opacity: "0",
-            transform: "translateY(10px)",
-          },
-          "100%": {
-            opacity: "1",
-            transform: "translateY(0)",
-          },
-        },
-      },
-      animation: {
-        "fade-up": "fade-up 0.5s ease-out",
+        sans: ["Helvetica Neue", "Arial", "sans-serif"],
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+
