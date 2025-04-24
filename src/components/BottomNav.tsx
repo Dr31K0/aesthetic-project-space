@@ -21,7 +21,7 @@ const BottomNav = () => {
   return (
     <nav className="fixed bottom-0 left-0 right-0 bg-black/80 backdrop-blur-sm border-t border-white/10 px-4 py-3">
       <div className="flex justify-center items-center max-w-7xl mx-auto">
-        <div className="flex space-x-2">
+        <div className="flex space-x-2 bg-white/5 rounded-full p-1">
           {projectLinks.map((link) => (
             <Link
               key={link.path}
