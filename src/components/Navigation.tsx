@@ -22,11 +22,15 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed w-full bg-black/40 backdrop-blur-sm z-50 py-8">
+    <nav className="fixed w-full bg-white/5 backdrop-blur-xl border-b border-white/10 z-50 py-8">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
-          <Link to="/" className="text-xl font-light tracking-tight text-white hover:text-white/80 transition-colors">
+          <Link 
+            to="/" 
+            className="text-xl font-light tracking-tight text-white hover:text-white/80 transition-colors relative group"
+          >
             Portfolio
+            <RainbowBar className="absolute -bottom-1 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity" />
           </Link>
           
           <Button
@@ -43,28 +47,31 @@ const Navigation = () => {
               <li>
                 <a 
                   href={isHomePage ? "#work" : "/#work"} 
-                  className="text-sm tracking-wide text-neutral-400 hover:text-white transition-colors duration-300"
+                  className="text-sm tracking-wide text-neutral-400 hover:text-white transition-colors duration-300 relative group"
                   onClick={(e) => handleAnchorClick(e, "work")}
                 >
                   Work
+                  <RainbowBar className="absolute -bottom-1 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </a>
               </li>
               <li>
                 <a 
                   href={isHomePage ? "#about" : "/#about"} 
-                  className="text-sm tracking-wide text-neutral-400 hover:text-white transition-colors duration-300"
+                  className="text-sm tracking-wide text-neutral-400 hover:text-white transition-colors duration-300 relative group"
                   onClick={(e) => handleAnchorClick(e, "about")}
                 >
                   About
+                  <RainbowBar className="absolute -bottom-1 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </a>
               </li>
               <li>
                 <a 
                   href={isHomePage ? "#contact" : "/#contact"} 
-                  className="text-sm tracking-wide text-neutral-400 hover:text-white transition-colors duration-300"
+                  className="text-sm tracking-wide text-neutral-400 hover:text-white transition-colors duration-300 relative group"
                   onClick={(e) => handleAnchorClick(e, "contact")}
                 >
                   Contact
+                  <RainbowBar className="absolute -bottom-1 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </a>
               </li>
             </ul>
