@@ -1,17 +1,19 @@
 
+import React from 'react';
+
 const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center py-32">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="overflow-hidden mb-12">
-            <h1 className="reveal text-8xl md:text-9xl font-light tracking-tighter mb-6 creative-hover">
-              Product Designer
+            <h1 className="reveal text-7xl md:text-8xl font-light tracking-tighter mb-6 creative-hover">
+              Zakharenkov Andre
             </h1>
           </div>
           <div className="overflow-hidden">
             <p className="reveal reveal-delay-1 text-2xl md:text-3xl text-neutral-400 max-w-2xl leading-relaxed mb-16">
-              Creating thoughtful digital experiences through minimalist design and careful attention to detail
+              Product Designer
             </p>
           </div>
           <div className="overflow-hidden">
