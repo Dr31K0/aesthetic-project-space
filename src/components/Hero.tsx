@@ -3,16 +3,16 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center py-32">
+    <section className="min-h-[90vh] flex items-center py-24 md:py-32">
       <div className="container mx-auto px-4 md:px-12 lg:px-24">
         <div className="max-w-4xl ml-0 md:ml-8 lg:ml-16">
-          <div className="overflow-hidden mb-12">
-            <h1 className="reveal text-6xl md:text-7xl font-medium tracking-tight mb-4 text-white/90">
+          <div className="overflow-hidden mb-10">
+            <h1 className="reveal text-6xl md:text-7xl font-medium tracking-tight mb-4 text-white/95">
               Zakharenkov Andre
             </h1>
           </div>
-          <div className="overflow-hidden mb-8"> {/* Reduced bottom margin */}
-            <p className="reveal reveal-delay-1 text-xl md:text-2xl text-neutral-300 font-medium max-w-2xl leading-relaxed"> {/* Added font-medium, changed text color to be slightly brighter */}
+          <div className="overflow-hidden mb-6">
+            <p className="reveal reveal-delay-1 text-xl md:text-2xl text-neutral-300 font-medium max-w-2xl leading-relaxed">
               Product Designer
             </p>
           </div>

@@ -1,8 +1,9 @@
+
 const Info = () => {
-  return <section id="about" className="py-32 bg-neutral-900">
+  return <section id="about" className="py-28 md:py-32 bg-neutral-900/80 backdrop-blur-md">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-20">
+          <div className="grid lg:grid-cols-2 gap-12 md:gap-20">
             <div className="space-y-12">
               <div className="overflow-hidden">
                 <h2 className="reveal text-4xl md:text-5xl font-light tracking-tighter">
@@ -36,12 +37,17 @@ const Info = () => {
                 </div>
               </div>
             </div>
-            <div className="relative aspect-[4/5] bg-neutral-900 overflow-hidden rounded-lg">
-              <img alt="Workspace" className="w-full h-full opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-700 rounded-lg object-contain" src="/lovable-uploads/a654368f-44f5-42f6-9428-42f7fdeb2886.png" />
+            <div className="relative aspect-[4/5] bg-neutral-900/60 overflow-hidden rounded-lg group">
+              <img 
+                alt="Workspace" 
+                className="w-full h-full opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 rounded-lg object-contain" 
+                src="/lovable-uploads/a654368f-44f5-42f6-9428-42f7fdeb2886.png" 
+              />
             </div>
           </div>
         </div>
       </div>
     </section>;
 };
+
 export default Info;

@@ -27,7 +27,7 @@ const projects = [
 
 const ProjectGrid = () => {
   return (
-    <section id="work" className="py-32 bg-black/40 backdrop-blur-md">
+    <section id="work" className="py-28 md:py-32 bg-black/60 backdrop-blur-lg">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="overflow-hidden mb-16">
@@ -35,7 +35,7 @@ const ProjectGrid = () => {
               Selected Works
             </h2>
           </div>
-          <div className="grid grid-cols-1 gap-24">
+          <div className="grid grid-cols-1 gap-16 md:gap-24">
             {projects.map((project) => (
               <Link
                 key={project.id}
@@ -47,6 +47,7 @@ const ProjectGrid = () => {
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 rounded-2xl"
+                    onLoad={(e) => e.currentTarget.classList.remove('loading')}
                   />
                 </div>
                 <div className="overflow-hidden">
