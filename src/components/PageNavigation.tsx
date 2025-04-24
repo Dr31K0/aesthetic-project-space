@@ -26,7 +26,7 @@ const PageNavigation = () => {
 
   return (
     <div className="fixed inset-y-0 left-0 right-0 pointer-events-none flex items-center justify-between px-4 z-50">
-      {currentIndex > 0 && (
+      {location.pathname !== '/brief' && currentIndex > 0 && (
         <button
           onClick={goToPrevious}
           className="pointer-events-auto h-12 w-12 rounded-full bg-black/20 backdrop-blur-sm hover:bg-black/40 flex items-center justify-center transition-all duration-300 border border-white/10"
@@ -38,7 +38,7 @@ const PageNavigation = () => {
       {currentIndex < routes.length - 1 && (
         <button
           onClick={goToNext}
-          className="pointer-events-auto h-12 w-12 rounded-full bg-black/20 backdrop-blur-sm hover:bg-black/40 flex items-center justify-center transition-all duration-300 border border-white/10"
+          className="pointer-events-auto h-12 w-12 rounded-full bg-black/20 backdrop-blur-sm hover:bg-black/40 flex items-center justify-center transition-all duration-300 border border-white/10 ml-auto"
           aria-label="Next page"
         >
           <ArrowRight className="w-6 h-6 text-white/80" />
@@ -49,3 +49,4 @@ const PageNavigation = () => {
 };
 
 export default PageNavigation;
+
