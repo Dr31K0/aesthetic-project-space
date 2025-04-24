@@ -1,17 +1,10 @@
 
-import ProjectHeader from '../components/ProjectHeader';
-
 const Brief = () => {
   return (
     <div className="min-h-screen relative overflow-hidden pt-24 pb-32">
       <div className="animated-blob blob-1" />
       <div className="animated-blob blob-2" />
       <div className="relative z-10 container mx-auto px-4">
-        <ProjectHeader
-          title="01."
-          subtitle="Octavium Prism"
-          description="First watch box clock - Create an event calendar for a specific event of your choice, featuring brands that you also select."
-        />
         <div className="flex items-center justify-center my-8">
           <div className="rounded-3xl overflow-hidden shadow-lg bg-black/20 backdrop-blur-sm p-2">
             <div className="rounded-3xl overflow-hidden">
