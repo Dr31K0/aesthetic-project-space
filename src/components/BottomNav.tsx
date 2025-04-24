@@ -11,8 +11,8 @@ const BottomNav = () => {
   
   const projectLinks = [
     { path: '/brief', label: 'Brief' },
-    { path: '/analysis1', label: 'Analysis 1' },
-    { path: '/analysis2', label: 'Analysis 2' },
+    { path: '/analysis1', label: 'Target' },
+    { path: '/analysis2', label: 'Brand' },
     { path: '/research', label: 'Research' },
     { path: '/avp', label: 'AVP' },
     { path: '/final', label: 'Final' },
