@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -33,10 +32,9 @@ export default {
         border: "#666666",
       },
       fontFamily: {
-        sans: ["Helvetica Neue", "Arial", "sans-serif"],
+        sans: ['Helvetica Neue', 'Arial', 'sans-serif'],
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
-

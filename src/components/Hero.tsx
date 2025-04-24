@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl">
           <div className="overflow-hidden mb-12">
-            <h1 className="reveal text-6xl md:text-7xl font-light tracking-tight mb-4">
+            <h1 className="reveal text-6xl md:text-7xl font-bold tracking-tight mb-4">
               Zakharenkov Andre
             </h1>
           </div>
