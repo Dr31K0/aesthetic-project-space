@@ -1,6 +1,6 @@
 
 import ProjectHeader from '../components/ProjectHeader';
-import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { AspectRatio } from "../components/ui/aspect-ratio";
 
 const Analysis2 = () => {
   return (
