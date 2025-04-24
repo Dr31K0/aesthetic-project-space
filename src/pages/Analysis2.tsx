@@ -13,11 +13,11 @@ const Analysis2 = () => {
           subtitle="Defining Luxury"
           description="Luxury watch consumers value craftsmanship, heritage, and exclusivity. Our project aligns with these values through innovative design and premium features."
         />
-        <div className="grid grid-cols-1 gap-8 max-w-5xl mx-auto">
+        <div className="aspect-video w-full max-w-5xl mx-auto rounded-lg overflow-hidden">
           <img
             src="/lovable-uploads/92bcddf5-2919-41ad-bccf-ce05c3930b8c.png"
             alt="Analysis luxury definition"
-            className="w-full rounded-lg"
+            className="w-full h-full object-cover"
           />
         </div>
         <ProgressBar 

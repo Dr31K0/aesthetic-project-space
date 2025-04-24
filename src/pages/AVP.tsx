@@ -13,11 +13,11 @@ const AVP = () => {
           subtitle="Visual Identity"
           description="Audio-visual presentation showcasing the Octavium Prism's unique features, design language, and brand positioning in the luxury watch market."
         />
-        <div className="grid grid-cols-1 gap-8 max-w-5xl mx-auto">
+        <div className="aspect-video w-full max-w-5xl mx-auto rounded-lg overflow-hidden">
           <img
             src="/lovable-uploads/92bcddf5-2919-41ad-bccf-ce05c3930b8c.png"
             alt="AVP presentation"
-            className="w-full rounded-lg"
+            className="w-full h-full object-cover"
           />
         </div>
         <ProgressBar 
