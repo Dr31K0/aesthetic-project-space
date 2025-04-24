@@ -5,6 +5,7 @@ const BottomNav = () => {
   const location = useLocation();
   
   const links = [
+    { path: '/', label: 'Home' },
     { path: '/brief', label: 'Brief' },
     { path: '/analysis1', label: 'Analysis 1' },
     { path: '/analysis2', label: 'Analysis 2' },
