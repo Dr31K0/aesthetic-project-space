@@ -36,10 +36,10 @@ const Info = () => {
                 </div>
               </div>
             </div>
-            <div className="relative aspect-[4/5] bg-neutral-900/60 overflow-hidden rounded-xl group">
+            <div className="relative aspect-[4/5] bg-neutral-900/60 overflow-hidden rounded-2xl group">
               <img 
                 alt="Workspace" 
-                className="w-full h-full opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 rounded-xl object-contain" 
+                className="w-full h-full opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 rounded-2xl object-contain" 
                 src="/lovable-uploads/a654368f-44f5-42f6-9428-42f7fdeb2886.png" 
               />
             </div>
