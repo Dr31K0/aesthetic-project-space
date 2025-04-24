@@ -1,5 +1,6 @@
 
 import ProjectHeader from '../components/ProjectHeader';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 const Analysis2 = () => {
   return (
@@ -14,12 +15,14 @@ const Analysis2 = () => {
             description="Audemars Piguet fuses heritage with innovation, crafting bold, prestigious timepieces that reflect individuality and timeless style."
           />
           <div className="flex items-center justify-center h-[70vh]">
-            <div className="rounded-3xl overflow-hidden shadow-lg" style={{ aspectRatio: '1 / 1.414' }}>
-              <img
-                src="/lovable-uploads/dbb82eb7-f403-4526-ae4c-6bae1f8de206.png"
-                alt="Audemars Piguet Analysis"
-                className="w-full h-full object-contain rounded-3xl"
-              />
+            <div className="rounded-3xl overflow-hidden shadow-lg w-auto">
+              <AspectRatio ratio={1 / 1.414} className="w-full h-full">
+                <img
+                  src="/lovable-uploads/dbb82eb7-f403-4526-ae4c-6bae1f8de206.png"
+                  alt="Audemars Piguet Analysis"
+                  className="w-full h-full object-contain rounded-3xl"
+                />
+              </AspectRatio>
             </div>
           </div>
         </div>
