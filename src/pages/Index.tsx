@@ -1,5 +1,4 @@
 
-import Navigation from "../components/Navigation";
 import Hero from "../components/Hero";
 import Info from "../components/Info";
 import ProjectGrid from "../components/ProjectGrid";
@@ -11,7 +10,6 @@ const Index = () => {
       <div className="animated-blob blob-2" />
       <div className="noise-overlay" />
       <div className="relative z-10">
-        <Navigation />
         <Hero />
         <Info />
         <ProjectGrid />
