@@ -1,6 +1,5 @@
 
 import ProjectHeader from '../components/ProjectHeader';
-import ProgressBar from '../components/ProgressBar';
 
 const Research = () => {
   return (
@@ -10,21 +9,16 @@ const Research = () => {
       <div className="relative z-10 container mx-auto px-4">
         <ProjectHeader
           title="Research"
-          subtitle="Market Analysis"
-          description="Comprehensive market research focusing on luxury watch market trends, consumer behavior, and competitive analysis in the high-end timepiece segment."
+          subtitle="Sketches & Drawings"
+          description="Here are sketches that showcase a variety of conceptual clock designs, combining geometric forms like hexagons, spheres, and pyramids with functional components such as dials, gears, and housing structures."
         />
         <div className="aspect-video w-full max-w-5xl mx-auto rounded-lg overflow-hidden">
           <img
-            src="/lovable-uploads/45cef3c6-b87d-4547-9ddf-bb5ffb5a94c7.png"
-            alt="Research market analysis"
+            src="/lovable-uploads/3e9db280-3066-403c-a385-2e6e9208ab19.png"
+            alt="Clock design sketches"
             className="w-full h-full object-cover"
           />
         </div>
-        <ProgressBar 
-          currentStep={3} 
-          totalSteps={4} 
-          labels={['Analysis', 'Research', 'AVP', 'Final']} 
-        />
       </div>
     </div>
   );

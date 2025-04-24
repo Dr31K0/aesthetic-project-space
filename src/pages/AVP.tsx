@@ -1,6 +1,5 @@
 
 import ProjectHeader from '../components/ProjectHeader';
-import ProgressBar from '../components/ProgressBar';
 
 const AVP = () => {
   return (
@@ -10,21 +9,16 @@ const AVP = () => {
       <div className="relative z-10 container mx-auto px-4">
         <ProjectHeader
           title="AVP"
-          subtitle="Visual Identity"
-          description="Audio-visual presentation showcasing the Octavium Prism's unique features, design language, and brand positioning in the luxury watch market."
+          subtitle="3 Final AVPs"
+          description="These three AVPs explore creative timepiece concepts, together, they reimagine the experience of watch presentation through playful, interactive, and narrative-driven."
         />
         <div className="aspect-video w-full max-w-5xl mx-auto rounded-lg overflow-hidden">
           <img
-            src="/lovable-uploads/92bcddf5-2919-41ad-bccf-ce05c3930b8c.png"
-            alt="AVP presentation"
+            src="/lovable-uploads/c824da51-363c-4780-ba07-55c95c252608.png"
+            alt="Final AVPs concepts"
             className="w-full h-full object-cover"
           />
         </div>
-        <ProgressBar 
-          currentStep={3} 
-          totalSteps={4} 
-          labels={['Analysis', 'Research', 'AVP', 'Final']} 
-        />
       </div>
     </div>
   );

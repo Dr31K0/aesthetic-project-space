@@ -1,6 +1,5 @@
 
 import ProjectHeader from '../components/ProjectHeader';
-import ProgressBar from '../components/ProgressBar';
 
 const Final = () => {
   return (
@@ -10,21 +9,16 @@ const Final = () => {
       <div className="relative z-10 container mx-auto px-4">
         <ProjectHeader
           title="Final"
-          subtitle="Project Completion"
-          description="Complete project overview highlighting key achievements, market insights, and the successful development of the Octavium Prism watch box concept."
+          subtitle="Octavium Prism"
+          description="The Octavium Prism is a rainbow-hued clock and advent calendar that stores and reveals eight colored Audemars Piguet watches, each hidden in a matching crystal compartment."
         />
         <div className="aspect-video w-full max-w-5xl mx-auto rounded-lg overflow-hidden">
           <img
-            src="/lovable-uploads/45cef3c6-b87d-4547-9ddf-bb5ffb5a94c7.png"
-            alt="Final project overview"
+            src="/lovable-uploads/996f414e-6eba-4739-a2dc-564178147f23.png"
+            alt="Octavium Prism Final"
             className="w-full h-full object-cover"
           />
         </div>
-        <ProgressBar 
-          currentStep={4} 
-          totalSteps={4} 
-          labels={['Analysis', 'Research', 'AVP', 'Final']} 
-        />
       </div>
     </div>
   );

@@ -1,6 +1,5 @@
 
 import ProjectHeader from '../components/ProjectHeader';
-import ProgressBar from '../components/ProgressBar';
 
 const Analysis2 = () => {
   return (
@@ -10,21 +9,16 @@ const Analysis2 = () => {
       <div className="relative z-10 container mx-auto px-4">
         <ProjectHeader
           title="Analysis"
-          subtitle="Defining Luxury"
-          description="Luxury watch consumers value craftsmanship, heritage, and exclusivity. Our project aligns with these values through innovative design and premium features."
+          subtitle="Audemars Piguet"
+          description="Audemars Piguet fuses heritage with innovation, crafting bold, prestigious timepieces that reflect individuality and timeless style."
         />
         <div className="aspect-video w-full max-w-5xl mx-auto rounded-lg overflow-hidden">
           <img
-            src="/lovable-uploads/92bcddf5-2919-41ad-bccf-ce05c3930b8c.png"
-            alt="Analysis luxury definition"
+            src="/lovable-uploads/dbb82eb7-f403-4526-ae4c-6bae1f8de206.png"
+            alt="Audemars Piguet Analysis"
             className="w-full h-full object-cover"
           />
         </div>
-        <ProgressBar 
-          currentStep={2} 
-          totalSteps={4} 
-          labels={['Analysis', 'Research', 'AVP', 'Final']} 
-        />
       </div>
     </div>
   );
