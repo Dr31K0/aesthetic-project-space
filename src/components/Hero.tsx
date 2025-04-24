@@ -11,8 +11,8 @@ const Hero = () => {
               Zakharenkov Andre
             </h1>
           </div>
-          <div className="overflow-hidden mb-16">
-            <p className="reveal reveal-delay-1 text-xl md:text-2xl text-neutral-400 max-w-2xl leading-relaxed">
+          <div className="overflow-hidden mb-8"> {/* Reduced bottom margin */}
+            <p className="reveal reveal-delay-1 text-xl md:text-2xl text-neutral-300 font-medium max-w-2xl leading-relaxed"> {/* Added font-medium, changed text color to be slightly brighter */}
               Product Designer
             </p>
           </div>
