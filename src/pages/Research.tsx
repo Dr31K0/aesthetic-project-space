@@ -11,7 +11,7 @@ const Research = () => {
           <div className="rounded-3xl overflow-hidden shadow-lg bg-black/20 backdrop-blur-sm p-2 max-w-[90%] max-h-[90%]">
             <div className="rounded-3xl overflow-hidden">
               <img
-                src="/lovable-uploads/3e9db280-3066-403c-a385-2e6e9208ab19.png"
+                src="./lovable-uploads/3e9db280-3066-403c-a385-2e6e9208ab19.png"
                 alt="Clock design sketches"
                 className="w-full h-auto object-contain rounded-3xl"
               />

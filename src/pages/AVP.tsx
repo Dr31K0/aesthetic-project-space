@@ -11,7 +11,7 @@ const AVP = () => {
           <div className="rounded-3xl overflow-hidden shadow-lg bg-black/20 backdrop-blur-sm p-2 max-w-[90%] max-h-[90%]">
             <div className="rounded-3xl overflow-hidden">
               <img
-                src="/lovable-uploads/c824da51-363c-4780-ba07-55c95c252608.png"
+                src="./lovable-uploads/c824da51-363c-4780-ba07-55c95c252608.png"
                 alt="Final AVPs concepts"
                 className="w-full h-auto object-contain rounded-3xl"
               />

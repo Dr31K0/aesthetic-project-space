@@ -6,21 +6,21 @@ const projects = [
     id: 1,
     title: "Octavium Prism",
     description: "Product Design",
-    image: "/lovable-uploads/92bcddf5-2919-41ad-bccf-ce05c3930b8c.png",
+    image: "./lovable-uploads/92bcddf5-2919-41ad-bccf-ce05c3930b8c.png",
     path: "/brief"
   },
   {
     id: 2,
     title: "Analysis & Research",
     description: "UX & Market Research",
-    image: "/lovable-uploads/45cef3c6-b87d-4547-9ddf-bb5ffb5a94c7.png",
+    image: "./lovable-uploads/45cef3c6-b87d-4547-9ddf-bb5ffb5a94c7.png",
     path: "/analysis1"
   },
   {
     id: 3,
     title: "Final Design",
     description: "Industrial Design",
-    image: "/lovable-uploads/996f414e-6eba-4739-a2dc-564178147f23.png",
+    image: "./lovable-uploads/996f414e-6eba-4739-a2dc-564178147f23.png",
     path: "/final"
   },
 ];

@@ -1,4 +1,3 @@
-
 const Info = () => {
   return <section id="about" className="py-28 md:py-32 bg-neutral-900/80 backdrop-blur-md">
       <div className="container mx-auto px-4">
@@ -41,7 +40,7 @@ const Info = () => {
               <img 
                 alt="Workspace" 
                 className="w-full h-full opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 rounded-2xl object-cover" 
-                src="/lovable-uploads/a654368f-44f5-42f6-9428-42f7fdeb2886.png" 
+                src="./lovable-uploads/a654368f-44f5-42f6-9428-42f7fdeb2886.png" 
                 style={{ borderRadius: '16px' }}
               />
             </div>

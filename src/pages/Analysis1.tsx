@@ -18,7 +18,7 @@ const Analysis1 = () => {
           <div className="rounded-3xl overflow-hidden shadow-lg bg-black/20 backdrop-blur-sm p-2 max-w-[90%] max-h-[90%]">
             <div className="rounded-3xl overflow-hidden">
               <img
-                src="/lovable-uploads/45cef3c6-b87d-4547-9ddf-bb5ffb5a94c7.png"
+                src="./lovable-uploads/45cef3c6-b87d-4547-9ddf-bb5ffb5a94c7.png"
                 alt="Analysis lifestyle"
                 className="w-full h-auto object-contain rounded-3xl"
               />
