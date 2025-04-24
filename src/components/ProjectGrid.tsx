@@ -35,22 +35,22 @@ const ProjectGrid = () => {
               Selected Works
             </h2>
           </div>
-          <div className="grid grid-cols-1 gap-20">
+          <div className="grid grid-cols-1 gap-24">
             {projects.map((project) => (
               <Link
                 key={project.id}
                 to={project.path}
                 className="group block"
               >
-                <div className="aspect-[16/9] overflow-hidden bg-neutral-900 mb-6 rounded-2xl">
+                <div className="aspect-[16/9] overflow-hidden bg-neutral-900/50 mb-8 rounded-2xl creative-hover">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 rounded-2xl"
+                    className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 rounded-2xl"
                   />
                 </div>
                 <div className="overflow-hidden">
-                  <h3 className="text-2xl font-light mb-2 tracking-tight group-hover:translate-x-2 transition-transform duration-300">
+                  <h3 className="text-2xl font-light mb-3 tracking-tight group-hover:translate-x-2 transition-transform duration-300">
                     {project.title}
                   </h3>
                   <p className="text-neutral-400 group-hover:translate-x-2 transition-transform duration-300 delay-75">

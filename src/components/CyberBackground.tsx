@@ -11,7 +11,6 @@ const CyberBackground = () => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
     
-    // Set canvas to full screen
     const handleResize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
@@ -20,115 +19,87 @@ const CyberBackground = () => {
     window.addEventListener('resize', handleResize);
     handleResize();
     
-    // Colors for cyber theme
-    const colors = ['#9b87f5', '#7E69AB', '#6E59A5', '#1EAEDB', '#33C3F0'];
-    
-    // Define geometric shapes
     const shapes: any[] = [];
-    for (let i = 0; i < 20; i++) {
+    const numShapes = 50; // More shapes for complexity
+    
+    // Create geometric shapes with varying properties
+    for (let i = 0; i < numShapes; i++) {
       shapes.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        size: Math.random() * 80 + 40,
-        color: colors[Math.floor(Math.random() * colors.length)],
-        speed: Math.random() * 0.2 + 0.1,
-        direction: Math.random() * Math.PI * 2,
-        rotation: 0,
-        rotationSpeed: (Math.random() - 0.5) * 0.01,
-        opacity: Math.random() * 0.2 + 0.05,
-        type: Math.floor(Math.random() * 3) // 0: triangle, 1: rectangle, 2: hexagon
+        size: Math.random() * 100 + 20,
+        opacity: Math.random() * 0.15 + 0.05,
+        rotation: Math.random() * Math.PI * 2,
+        rotationSpeed: (Math.random() - 0.5) * 0.02,
+        vertices: Math.floor(Math.random() * 4) + 3, // 3 to 6 vertices
+        lineWidth: Math.random() * 2 + 0.5,
+        moveSpeed: Math.random() * 0.5 + 0.1,
+        direction: Math.random() * Math.PI * 2
       });
     }
     
-    // Animation loop
-    const render = () => {
-      // Create gradient background
-      const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-      gradient.addColorStop(0, '#1A1F2C');
-      gradient.addColorStop(1, '#221F26');
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    const drawShape = (ctx: CanvasRenderingContext2D, shape: any) => {
+      ctx.beginPath();
+      ctx.strokeStyle = `rgba(255, 255, 255, ${shape.opacity})`;
+      ctx.lineWidth = shape.lineWidth;
       
-      // Draw shapes
-      shapes.forEach(shape => {
-        ctx.save();
-        ctx.globalAlpha = shape.opacity;
-        ctx.translate(shape.x, shape.y);
-        ctx.rotate(shape.rotation);
+      for (let i = 0; i <= shape.vertices; i++) {
+        const angle = (i * 2 * Math.PI / shape.vertices) + shape.rotation;
+        const x = shape.x + shape.size * Math.cos(angle);
+        const y = shape.y + shape.size * Math.sin(angle);
         
-        // Choose shape type
-        if (shape.type === 0) {
-          // Triangle
-          drawTriangle(ctx, 0, 0, shape.size, shape.color);
-        } else if (shape.type === 1) {
-          // Rectangle
-          drawRectangle(ctx, 0, 0, shape.size * 0.8, shape.size * 1.2, shape.color);
+        if (i === 0) {
+          ctx.moveTo(x, y);
         } else {
-          // Hexagon
-          drawHexagon(ctx, 0, 0, shape.size / 2, shape.color);
+          ctx.lineTo(x, y);
         }
+      }
+      
+      ctx.closePath();
+      ctx.stroke();
+      
+      // Add connecting lines between shapes occasionally
+      if (Math.random() < 0.3) {
+        const nearestShape = shapes.find(s => 
+          s !== shape && 
+          Math.hypot(s.x - shape.x, s.y - shape.y) < shape.size * 2
+        );
         
-        ctx.restore();
-        
-        // Update position
-        shape.x += Math.cos(shape.direction) * shape.speed;
-        shape.y += Math.sin(shape.direction) * shape.speed;
+        if (nearestShape) {
+          ctx.beginPath();
+          ctx.moveTo(shape.x, shape.y);
+          ctx.lineTo(nearestShape.x, nearestShape.y);
+          ctx.strokeStyle = `rgba(255, 255, 255, ${shape.opacity * 0.5})`;
+          ctx.lineWidth = 0.5;
+          ctx.stroke();
+        }
+      }
+    };
+    
+    const render = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      // Update and draw shapes
+      shapes.forEach(shape => {
         shape.rotation += shape.rotationSpeed;
+        shape.x += Math.cos(shape.direction) * shape.moveSpeed;
+        shape.y += Math.sin(shape.direction) * shape.moveSpeed;
         
         // Wrap around screen edges
         if (shape.x < -shape.size) shape.x = canvas.width + shape.size;
         if (shape.x > canvas.width + shape.size) shape.x = -shape.size;
         if (shape.y < -shape.size) shape.y = canvas.height + shape.size;
         if (shape.y > canvas.height + shape.size) shape.y = -shape.size;
+        
+        drawShape(ctx, shape);
       });
       
       requestAnimationFrame(render);
     };
     
-    // Helper functions to draw shapes
-    function drawTriangle(ctx: CanvasRenderingContext2D, x: number, y: number, size: number, color: string) {
-      ctx.beginPath();
-      ctx.moveTo(x, y - size / 2);
-      ctx.lineTo(x - size / 2, y + size / 2);
-      ctx.lineTo(x + size / 2, y + size / 2);
-      ctx.closePath();
-      ctx.strokeStyle = color;
-      ctx.lineWidth = 1;
-      ctx.stroke();
-    }
-    
-    function drawRectangle(ctx: CanvasRenderingContext2D, x: number, y: number, width: number, height: number, color: string) {
-      ctx.strokeStyle = color;
-      ctx.lineWidth = 1;
-      ctx.strokeRect(x - width / 2, y - height / 2, width, height);
-    }
-    
-    function drawHexagon(ctx: CanvasRenderingContext2D, x: number, y: number, size: number, color: string) {
-      ctx.beginPath();
-      for (let i = 0; i < 6; i++) {
-        const angle = Math.PI * 2 / 6 * i;
-        const pointX = x + size * Math.cos(angle);
-        const pointY = y + size * Math.sin(angle);
-        
-        if (i === 0) {
-          ctx.moveTo(pointX, pointY);
-        } else {
-          ctx.lineTo(pointX, pointY);
-        }
-      }
-      ctx.closePath();
-      ctx.strokeStyle = color;
-      ctx.lineWidth = 1;
-      ctx.stroke();
-    }
-    
-    // Start animation
     render();
     
-    // Cleanup
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
   
   return (

@@ -22,7 +22,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed w-full bg-black/80 backdrop-blur-sm z-50 py-8">
+    <nav className="fixed w-full bg-black/40 backdrop-blur-sm z-50 py-8">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <Link to="/" className="text-xl font-light tracking-tight text-white hover:text-white/80 transition-colors">
