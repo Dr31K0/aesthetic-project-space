@@ -1,9 +1,16 @@
 
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Analysis1 = () => {
   return (
-    <div className="h-screen flex items-center justify-center relative overflow-hidden">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
+      className="h-screen flex items-center justify-center relative overflow-hidden"
+    >
       <div className="animated-blob blob-1" />
       <div className="animated-blob blob-2" />
       <div className="relative z-10 container mx-auto px-4">
@@ -19,7 +26,7 @@ const Analysis1 = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

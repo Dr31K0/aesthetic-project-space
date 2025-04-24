@@ -1,11 +1,12 @@
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import Navigation from "./components/Navigation";
 import BottomNav from "./components/BottomNav";
+import PageNavigation from "./components/PageNavigation";
 import Index from "./pages/Index";
 import Brief from "./pages/Brief";
 import Analysis1 from "./pages/Analysis1";
@@ -14,17 +15,18 @@ import Research from "./pages/Research";
 import AVP from "./pages/AVP";
 import Final from "./pages/Final";
 import NotFound from "./pages/NotFound";
+import { AnimatePresence } from "framer-motion";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Navigation />
-        <Routes>
+const AppContent = () => {
+  const location = useLocation();
+  
+  return (
+    <>
+      <Navigation />
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Index />} />
           <Route path="/brief" element={<Brief />} />
           <Route path="/analysis1" element={<Analysis1 />} />
@@ -34,7 +36,20 @@ const App = () => (
           <Route path="/final" element={<Final />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <BottomNav />
+      </AnimatePresence>
+      <PageNavigation />
+      <BottomNav />
+    </>
+  );
+};
+
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <BrowserRouter>
+        <AppContent />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
