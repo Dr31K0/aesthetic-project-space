@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -21,10 +22,10 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed w-full bg-black/40 backdrop-blur-sm z-50 py-8">
+    <nav className="fixed w-full z-50 py-6">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
-          <Link to="/" className="text-xl font-light tracking-tight text-white hover:text-white/80 transition-colors">
+          <Link to="/" className="text-base uppercase tracking-wider text-neutral-400 hover:text-white transition-colors">
             Portfolio
           </Link>
           
@@ -42,7 +43,7 @@ const Navigation = () => {
               <li>
                 <a 
                   href={isHomePage ? "#about" : "/#about"} 
-                  className="text-sm tracking-wide text-neutral-400 hover:text-white transition-colors duration-300"
+                  className="text-base uppercase tracking-wider text-neutral-400 hover:text-white transition-colors duration-300"
                   onClick={(e) => handleAnchorClick(e, "about")}
                 >
                   About
@@ -51,7 +52,7 @@ const Navigation = () => {
               <li>
                 <a 
                   href={isHomePage ? "#work" : "/#work"} 
-                  className="text-sm tracking-wide text-neutral-400 hover:text-white transition-colors duration-300"
+                  className="text-base uppercase tracking-wider text-neutral-400 hover:text-white transition-colors duration-300"
                   onClick={(e) => handleAnchorClick(e, "work")}
                 >
                   Work
@@ -60,7 +61,7 @@ const Navigation = () => {
               <li>
                 <a 
                   href={isHomePage ? "#contact" : "/#contact"} 
-                  className="text-sm tracking-wide text-neutral-400 hover:text-white transition-colors duration-300"
+                  className="text-base uppercase tracking-wider text-neutral-400 hover:text-white transition-colors duration-300"
                   onClick={(e) => handleAnchorClick(e, "contact")}
                 >
                   Contact
