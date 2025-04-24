@@ -6,7 +6,9 @@ import ProjectGrid from "../components/ProjectGrid";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-black relative">
+    <div className="min-h-screen bg-black relative overflow-hidden">
+      <div className="animated-blob blob-1" />
+      <div className="animated-blob blob-2" />
       <div className="noise-overlay" />
       <div className="relative z-10">
         <Navigation />
