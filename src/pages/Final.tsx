@@ -12,12 +12,16 @@ const Final = () => {
           subtitle="Octavium Prism"
           description="The Octavium Prism is a rainbow-hued clock and advent calendar that stores and reveals eight colored Audemars Piguet watches, each hidden in a matching crystal compartment."
         />
-        <div className="w-full max-w-5xl mx-auto rounded-lg overflow-hidden" style={{ aspectRatio: '1 / 1.414' }}>
-          <img
-            src="/lovable-uploads/996f414e-6eba-4739-a2dc-564178147f23.png"
-            alt="Octavium Prism Final"
-            className="w-full h-full object-contain"
-          />
+        <div className="flex items-center justify-center my-8">
+          <div className="rounded-3xl overflow-hidden shadow-lg bg-black/20 backdrop-blur-sm p-2">
+            <div className="rounded-3xl overflow-hidden">
+              <img
+                src="/lovable-uploads/996f414e-6eba-4739-a2dc-564178147f23.png"
+                alt="Octavium Prism Final"
+                className="w-full h-auto object-contain rounded-3xl"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>

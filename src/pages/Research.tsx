@@ -12,12 +12,16 @@ const Research = () => {
           subtitle="Sketches & Drawings"
           description="Here are sketches that showcase a variety of conceptual clock designs, combining geometric forms like hexagons, spheres, and pyramids with functional components such as dials, gears, and housing structures."
         />
-        <div className="w-full max-w-5xl mx-auto rounded-lg overflow-hidden" style={{ aspectRatio: '1 / 1.414' }}>
-          <img
-            src="/lovable-uploads/3e9db280-3066-403c-a385-2e6e9208ab19.png"
-            alt="Clock design sketches"
-            className="w-full h-full object-contain"
-          />
+        <div className="flex items-center justify-center my-8">
+          <div className="rounded-3xl overflow-hidden shadow-lg bg-black/20 backdrop-blur-sm p-2">
+            <div className="rounded-3xl overflow-hidden">
+              <img
+                src="/lovable-uploads/3e9db280-3066-403c-a385-2e6e9208ab19.png"
+                alt="Clock design sketches"
+                className="w-full h-auto object-contain rounded-3xl"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
