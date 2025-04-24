@@ -21,11 +21,6 @@ const Brief = () => {
             className="w-full h-full object-cover"
           />
         </div>
-        <ProgressBar 
-          currentStep={1} 
-          totalSteps={4} 
-          labels={['Analysis', 'Research', 'AVP', 'Final']} 
-        />
       </div>
     </div>
   );

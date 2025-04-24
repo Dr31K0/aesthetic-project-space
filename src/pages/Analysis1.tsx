@@ -1,6 +1,5 @@
 
 import ProjectHeader from '../components/ProjectHeader';
-import ProgressBar from '../components/ProgressBar';
 
 const Analysis1 = () => {
   return (
@@ -20,11 +19,6 @@ const Analysis1 = () => {
             className="w-full h-full object-cover"
           />
         </div>
-        <ProgressBar 
-          currentStep={2} 
-          totalSteps={4} 
-          labels={['Analysis', 'Research', 'AVP', 'Final']} 
-        />
       </div>
     </div>
   );
