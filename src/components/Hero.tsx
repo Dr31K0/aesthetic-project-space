@@ -3,11 +3,11 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-start py-32">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl">
+    <section className="min-h-screen flex items-center py-32">
+      <div className="container mx-auto px-4 md:px-12 lg:px-24">
+        <div className="max-w-4xl ml-0 md:ml-8 lg:ml-16">
           <div className="overflow-hidden mb-12">
-            <h1 className="reveal text-6xl md:text-7xl font-bold tracking-tight mb-4">
+            <h1 className="reveal text-6xl md:text-7xl font-semibold tracking-tight mb-4 text-white/90">
               Zakharenkov Andre
             </h1>
           </div>
