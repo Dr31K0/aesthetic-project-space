@@ -6,8 +6,8 @@ const Analysis1 = () => {
     <div className="min-h-screen relative flex items-center justify-center overflow-hidden pt-24 pb-32">
       <div className="animated-blob blob-1" />
       <div className="animated-blob blob-2" />
-      <div className="relative z-10 container mx-auto px-4">
-        <div className="w-full max-w-5xl mx-auto rounded-3xl overflow-hidden" style={{ aspectRatio: '1 / 1.414' }}>
+      <div className="relative z-10 container mx-auto px-4 flex justify-center items-center">
+        <div className="w-full max-w-5xl rounded-3xl overflow-hidden" style={{ aspectRatio: '1 / 1.414' }}>
           <ProjectHeader
             title="Analysis"
             subtitle="Hyperconnected Milenials"
