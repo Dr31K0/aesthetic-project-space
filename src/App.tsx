@@ -34,7 +34,6 @@ const AppContent = () => {
           <Route path="/research" element={<Research />} />
           <Route path="/avp" element={<AVP />} />
           <Route path="/final" element={<Final />} />
-          {/* Make sure we only have one catch-all route */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </AnimatePresence>
@@ -44,7 +43,6 @@ const AppContent = () => {
   );
 };
 
-// Update the main App component to redirect to home page when at the base URL
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
