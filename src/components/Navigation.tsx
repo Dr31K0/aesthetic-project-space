@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -42,20 +41,20 @@ const Navigation = () => {
             <ul className="flex flex-col lg:flex-row gap-8 lg:gap-12">
               <li>
                 <a 
-                  href={isHomePage ? "#work" : "/#work"} 
-                  className="text-sm tracking-wide text-neutral-400 hover:text-white transition-colors duration-300"
-                  onClick={(e) => handleAnchorClick(e, "work")}
-                >
-                  Work
-                </a>
-              </li>
-              <li>
-                <a 
                   href={isHomePage ? "#about" : "/#about"} 
                   className="text-sm tracking-wide text-neutral-400 hover:text-white transition-colors duration-300"
                   onClick={(e) => handleAnchorClick(e, "about")}
                 >
                   About
+                </a>
+              </li>
+              <li>
+                <a 
+                  href={isHomePage ? "#work" : "/#work"} 
+                  className="text-sm tracking-wide text-neutral-400 hover:text-white transition-colors duration-300"
+                  onClick={(e) => handleAnchorClick(e, "work")}
+                >
+                  Work
                 </a>
               </li>
               <li>
