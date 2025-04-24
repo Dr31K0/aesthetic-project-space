@@ -4,8 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 const BottomNav = () => {
   const location = useLocation();
   
-  const links = [
-    { path: '/', label: 'Home' },
+  const projectLinks = [
     { path: '/brief', label: 'Brief' },
     { path: '/analysis1', label: 'Analysis 1' },
     { path: '/analysis2', label: 'Analysis 2' },
@@ -17,19 +16,31 @@ const BottomNav = () => {
   return (
     <nav className="fixed bottom-0 left-0 right-0 bg-black/80 backdrop-blur-sm border-t border-white/10 px-4 py-3">
       <div className="flex justify-between items-center max-w-7xl mx-auto">
-        {links.map((link) => (
-          <Link
-            key={link.path}
-            to={link.path}
-            className={`text-sm px-3 py-2 rounded-full transition-colors ${
-              location.pathname === link.path
-                ? 'bg-white/10 text-white'
-                : 'text-white/60 hover:text-white'
-            }`}
-          >
-            {link.label}
-          </Link>
-        ))}
+        <Link
+          to="/"
+          className={`text-sm px-3 py-2 rounded-full transition-colors ${
+            location.pathname === '/'
+              ? 'bg-white/10 text-white'
+              : 'text-white/60 hover:text-white'
+          }`}
+        >
+          Home
+        </Link>
+        <div className="flex space-x-2">
+          {projectLinks.map((link) => (
+            <Link
+              key={link.path}
+              to={link.path}
+              className={`text-sm px-3 py-2 rounded-full transition-colors ${
+                location.pathname === link.path
+                  ? 'bg-white/10 text-white'
+                  : 'text-white/60 hover:text-white'
+              }`}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </div>
       </div>
     </nav>
   );
