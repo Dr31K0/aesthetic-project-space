@@ -17,8 +17,9 @@
   }
 
   * {
-    @apply border-border scroll-smooth;
+    @apply border-border;
     font-family: 'Helvetica Neue', Arial, sans-serif;
+    letter-spacing: -0.02em;
   }
 
   body {
@@ -26,10 +27,10 @@
   }
 }
 
-@keyframes fade-up {
+@keyframes reveal {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(100%);
   }
   to {
     opacity: 1;
@@ -37,6 +38,18 @@
   }
 }
 
-.animate-fade-up {
-  animation: fade-up 0.8s ease-out forwards;
+.reveal {
+  animation: reveal 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-delay-1 {
+  animation-delay: 0.1s;
+}
+
+.reveal-delay-2 {
+  animation-delay: 0.2s;
+}
+
+.reveal-delay-3 {
+  animation-delay: 0.3s;
 }
