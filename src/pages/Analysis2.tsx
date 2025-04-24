@@ -18,7 +18,7 @@ const Analysis2 = () => {
               <img
                 src="/lovable-uploads/dbb82eb7-f403-4526-ae4c-6bae1f8de206.png"
                 alt="Audemars Piguet Analysis"
-                className="w-full h-full object-contain"
+                className="w-full h-full object-contain rounded-3xl"
               />
             </div>
           </div>
