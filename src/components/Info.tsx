@@ -1,6 +1,5 @@
 const Info = () => {
-  return (
-    <section id="about" className="py-32 bg-black">
+  return <section id="about" className="py-32 bg-neutral-900">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-20">
@@ -38,17 +37,11 @@ const Info = () => {
               </div>
             </div>
             <div className="relative aspect-[4/5] bg-neutral-900 overflow-hidden rounded-lg">
-              <img
-                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80"
-                alt="Workspace"
-                className="w-full h-full object-cover opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-700 rounded-lg"
-              />
+              <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80" alt="Workspace" className="w-full h-full object-cover opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-700 rounded-lg" />
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Info;
