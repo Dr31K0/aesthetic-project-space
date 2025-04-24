@@ -37,7 +37,7 @@ const Info = () => {
                 </div>
               </div>
             </div>
-            <div className="relative aspect-[4/5] bg-neutral-900 overflow-hidden">
+            <div className="relative aspect-[4/5] bg-neutral-900 overflow-hidden rounded-lg">
               <img
                 src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80"
                 alt="Workspace"
