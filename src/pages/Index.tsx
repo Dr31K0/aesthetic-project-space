@@ -8,7 +8,6 @@ const Index = () => {
     <div className="min-h-screen relative overflow-hidden">
       <div className="animated-blob blob-1" />
       <div className="animated-blob blob-2" />
-      <div className="noise-overlay" />
       <div className="relative z-10">
         <Hero />
         <Info />
