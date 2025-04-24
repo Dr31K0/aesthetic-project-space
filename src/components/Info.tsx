@@ -37,7 +37,7 @@ const Info = () => {
               </div>
             </div>
             <div className="relative aspect-[4/5] bg-neutral-900 overflow-hidden rounded-lg">
-              <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80" alt="Workspace" className="w-full h-full object-cover opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-700 rounded-lg" />
+              <img alt="Workspace" className="w-full h-full opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-700 rounded-lg object-contain" src="/lovable-uploads/a654368f-44f5-42f6-9428-42f7fdeb2886.png" />
             </div>
           </div>
         </div>
