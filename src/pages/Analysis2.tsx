@@ -12,11 +12,11 @@ const Analysis2 = () => {
           subtitle="Audemars Piguet"
           description="Audemars Piguet fuses heritage with innovation, crafting bold, prestigious timepieces that reflect individuality and timeless style."
         />
-        <div className="aspect-video w-full max-w-5xl mx-auto rounded-lg overflow-hidden">
+        <div className="w-full max-w-5xl mx-auto rounded-lg overflow-hidden" style={{ aspectRatio: '1 / 1.414' }}>
           <img
             src="/lovable-uploads/dbb82eb7-f403-4526-ae4c-6bae1f8de206.png"
             alt="Audemars Piguet Analysis"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain"
           />
         </div>
       </div>

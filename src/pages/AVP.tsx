@@ -12,11 +12,11 @@ const AVP = () => {
           subtitle="3 Final AVPs"
           description="These three AVPs explore creative timepiece concepts, together, they reimagine the experience of watch presentation through playful, interactive, and narrative-driven."
         />
-        <div className="aspect-video w-full max-w-5xl mx-auto rounded-lg overflow-hidden">
+        <div className="w-full max-w-5xl mx-auto rounded-lg overflow-hidden" style={{ aspectRatio: '1 / 1.414' }}>
           <img
             src="/lovable-uploads/c824da51-363c-4780-ba07-55c95c252608.png"
             alt="Final AVPs concepts"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain"
           />
         </div>
       </div>

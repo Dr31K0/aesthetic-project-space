@@ -1,7 +1,6 @@
 
 import { useNavigate } from 'react-router-dom';
 import ProjectHeader from '../components/ProjectHeader';
-import ProgressBar from '../components/ProgressBar';
 
 const Brief = () => {
   return (
@@ -14,11 +13,11 @@ const Brief = () => {
           subtitle="Octavium Prism"
           description="First watch box clock - Create an event calendar for a specific event of your choice, featuring brands that you also select."
         />
-        <div className="aspect-video w-full max-w-5xl mx-auto rounded-lg overflow-hidden">
+        <div className="w-full max-w-5xl mx-auto rounded-lg overflow-hidden" style={{ aspectRatio: '1 / 1.414' }}>
           <img
             src="/lovable-uploads/92bcddf5-2919-41ad-bccf-ce05c3930b8c.png"
             alt="Octavium Prism Project"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain"
           />
         </div>
       </div>

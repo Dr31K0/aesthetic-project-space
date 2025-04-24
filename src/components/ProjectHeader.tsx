@@ -8,11 +8,10 @@ interface ProjectHeaderProps {
 }
 
 const ProjectHeader = ({ title, subtitle, description }: ProjectHeaderProps) => {
+  // Return an empty div with the same styling to maintain layout
   return (
     <div className="max-w-4xl mx-auto text-left mb-16">
-      <h1 className="text-4xl font-bold mb-2">{title}</h1>
-      {subtitle && <h2 className="text-2xl text-gray-300 mb-4">{subtitle}</h2>}
-      <p className="text-gray-400 text-lg max-w-3xl">{description}</p>
+      {/* Removed all content as requested */}
     </div>
   );
 };

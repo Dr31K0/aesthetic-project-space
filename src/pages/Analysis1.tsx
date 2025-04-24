@@ -12,11 +12,11 @@ const Analysis1 = () => {
           subtitle="Hyperconnected Milenials"
           description="Hyperconnected Millennials value luxury, social status, and social media influence, using digital platforms to showcase their lifestyle. They seek stylish, high-value experiences that reflect success and exclusivity."
         />
-        <div className="aspect-video w-full max-w-5xl mx-auto rounded-lg overflow-hidden">
+        <div className="w-full max-w-5xl mx-auto rounded-lg overflow-hidden" style={{ aspectRatio: '1 / 1.414' }}>
           <img
             src="/lovable-uploads/45cef3c6-b87d-4547-9ddf-bb5ffb5a94c7.png"
             alt="Analysis lifestyle"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain"
           />
         </div>
       </div>
