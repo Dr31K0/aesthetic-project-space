@@ -1,11 +1,10 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 20%; /* Lighter dark grey */
+    --background: 0 0% 20%;
     --foreground: 0 0% 100%;
     --card: 0 0% 15%;
     --card-foreground: 0 0% 100%;
@@ -23,28 +22,8 @@
   }
 
   body {
-    @apply bg-[#333333] text-white antialiased;
-    background: linear-gradient(
-      135deg,
-      #2a2a2a,
-      #353535,
-      #3f3f3f,
-      #2a2a2a
-    );
-    background-size: 400% 400%;
-    animation: gradientShift 15s ease infinite;
-  }
-}
-
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
+    @apply bg-[#111111] text-white antialiased;
+    background: radial-gradient(circle at center, #1a1a1a 0%, #111111 100%);
   }
 }
 
@@ -93,8 +72,8 @@
 .animated-blob {
   position: fixed;
   border-radius: 50%;
-  filter: blur(100px);
-  opacity: 0.4;
+  filter: blur(120px);
+  opacity: 0.3;
   z-index: 0;
   pointer-events: none;
 }
@@ -102,7 +81,7 @@
 .blob-1 {
   width: 800px;
   height: 800px;
-  background: radial-gradient(circle, #666666 0%, #444444 100%);
+  background: radial-gradient(circle, #444444 0%, #222222 100%);
   top: 10%;
   left: -5%;
   animation: floating 15s infinite ease-in-out;
@@ -111,7 +90,7 @@
 .blob-2 {
   width: 1000px;
   height: 1000px;
-  background: radial-gradient(circle, #555555 0%, #333333 100%);
+  background: radial-gradient(circle, #333333 0%, #111111 100%);
   bottom: -10%;
   right: -5%;
   animation: floating 20s infinite ease-in-out reverse;
