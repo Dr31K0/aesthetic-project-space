@@ -4,6 +4,11 @@ import { Link, useLocation } from 'react-router-dom';
 const BottomNav = () => {
   const location = useLocation();
   
+  // Don't show the bottom nav on the main page
+  if (location.pathname === '/') {
+    return null;
+  }
+  
   const projectLinks = [
     { path: '/brief', label: 'Brief' },
     { path: '/analysis1', label: 'Analysis 1' },
@@ -37,4 +42,3 @@ const BottomNav = () => {
 };
 
 export default BottomNav;
-
