@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Info = () => {
   return (
-    <section id="about" className="py-32 bg-white/5 backdrop-blur-xl border-y border-white/10">
+    <section id="about" className="py-32 bg-white/10 backdrop-blur-xl border-y border-white/20">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-20">
