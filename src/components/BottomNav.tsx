@@ -15,17 +15,7 @@ const BottomNav = () => {
 
   return (
     <nav className="fixed bottom-0 left-0 right-0 bg-black/80 backdrop-blur-sm border-t border-white/10 px-4 py-3">
-      <div className="flex justify-between items-center max-w-7xl mx-auto">
-        <Link
-          to="/"
-          className={`text-sm px-3 py-2 rounded-full transition-colors ${
-            location.pathname === '/'
-              ? 'bg-white/10 text-white'
-              : 'text-white/60 hover:text-white'
-          }`}
-        >
-          Home
-        </Link>
+      <div className="flex justify-center items-center max-w-7xl mx-auto">
         <div className="flex space-x-2">
           {projectLinks.map((link) => (
             <Link
@@ -47,3 +37,4 @@ const BottomNav = () => {
 };
 
 export default BottomNav;
+
