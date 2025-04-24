@@ -1,14 +1,30 @@
 
+import ProjectHeader from '../components/ProjectHeader';
+import ProgressBar from '../components/ProgressBar';
+
 const AVP = () => {
   return (
-    <div className="min-h-screen relative overflow-hidden pt-24">
+    <div className="min-h-screen relative overflow-hidden pt-24 pb-32">
       <div className="animated-blob blob-1" />
       <div className="animated-blob blob-2" />
-      <div className="relative z-10 flex flex-col items-center justify-center">
-        <h1 className="text-6xl font-light mb-6">AVP</h1>
-        <p className="text-xl text-white/70 max-w-2xl text-center">
-          Audio-visual presentation materials and media assets.
-        </p>
+      <div className="relative z-10 container mx-auto px-4">
+        <ProjectHeader
+          title="AVP"
+          subtitle="Visual Identity"
+          description="Audio-visual presentation showcasing the Octavium Prism's unique features, design language, and brand positioning in the luxury watch market."
+        />
+        <div className="grid grid-cols-1 gap-8 max-w-5xl mx-auto">
+          <img
+            src="/lovable-uploads/92bcddf5-2919-41ad-bccf-ce05c3930b8c.png"
+            alt="AVP presentation"
+            className="w-full rounded-lg"
+          />
+        </div>
+        <ProgressBar 
+          currentStep={3} 
+          totalSteps={4} 
+          labels={['Analysis', 'Research', 'AVP', 'Final']} 
+        />
       </div>
     </div>
   );

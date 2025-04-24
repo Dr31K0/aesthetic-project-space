@@ -1,14 +1,30 @@
 
+import ProjectHeader from '../components/ProjectHeader';
+import ProgressBar from '../components/ProgressBar';
+
 const Research = () => {
   return (
-    <div className="min-h-screen relative overflow-hidden pt-24">
+    <div className="min-h-screen relative overflow-hidden pt-24 pb-32">
       <div className="animated-blob blob-1" />
       <div className="animated-blob blob-2" />
-      <div className="relative z-10 flex flex-col items-center justify-center">
-        <h1 className="text-6xl font-light mb-6">Research</h1>
-        <p className="text-xl text-white/70 max-w-2xl text-center">
-          Comprehensive research findings and methodology overview.
-        </p>
+      <div className="relative z-10 container mx-auto px-4">
+        <ProjectHeader
+          title="Research"
+          subtitle="Market Analysis"
+          description="Comprehensive market research focusing on luxury watch market trends, consumer behavior, and competitive analysis in the high-end timepiece segment."
+        />
+        <div className="grid grid-cols-1 gap-8 max-w-5xl mx-auto">
+          <img
+            src="/lovable-uploads/45cef3c6-b87d-4547-9ddf-bb5ffb5a94c7.png"
+            alt="Research market analysis"
+            className="w-full rounded-lg"
+          />
+        </div>
+        <ProgressBar 
+          currentStep={3} 
+          totalSteps={4} 
+          labels={['Analysis', 'Research', 'AVP', 'Final']} 
+        />
       </div>
     </div>
   );
