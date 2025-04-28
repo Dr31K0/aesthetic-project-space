@@ -20,27 +20,32 @@ const CyberBackground = () => {
     handleResize();
     
     const shapes: any[] = [];
-    const numShapes = 50; // More shapes for complexity
+    const numShapes = 60; // More shapes for complexity
     
     // Create geometric shapes with varying properties
     for (let i = 0; i < numShapes; i++) {
       shapes.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        size: Math.random() * 100 + 20,
+        size: Math.random() * 120 + 30,
         opacity: Math.random() * 0.15 + 0.05,
         rotation: Math.random() * Math.PI * 2,
-        rotationSpeed: (Math.random() - 0.5) * 0.02,
+        rotationSpeed: (Math.random() - 0.5) * 0.01,
         vertices: Math.floor(Math.random() * 4) + 3, // 3 to 6 vertices
         lineWidth: Math.random() * 2 + 0.5,
-        moveSpeed: Math.random() * 0.5 + 0.1,
-        direction: Math.random() * Math.PI * 2
+        moveSpeed: Math.random() * 0.4 + 0.1,
+        direction: Math.random() * Math.PI * 2,
+        pulse: Math.random() * 0.02 + 0.005,
+        pulseOffset: Math.random() * Math.PI * 2
       });
     }
     
-    const drawShape = (ctx: CanvasRenderingContext2D, shape: any) => {
+    const drawShape = (ctx: CanvasRenderingContext2D, shape: any, time: number) => {
+      // Apply subtle pulsing effect
+      const pulsingOpacity = shape.opacity * (0.8 + 0.2 * Math.sin(time * shape.pulse + shape.pulseOffset));
+      
       ctx.beginPath();
-      ctx.strokeStyle = `rgba(255, 255, 255, ${shape.opacity})`;
+      ctx.strokeStyle = `rgba(255, 255, 255, ${pulsingOpacity})`;
       ctx.lineWidth = shape.lineWidth;
       
       for (let i = 0; i <= shape.vertices; i++) {
@@ -59,25 +64,30 @@ const CyberBackground = () => {
       ctx.stroke();
       
       // Add connecting lines between shapes occasionally
-      if (Math.random() < 0.3) {
+      if (Math.random() < 0.2) {
         const nearestShape = shapes.find(s => 
           s !== shape && 
-          Math.hypot(s.x - shape.x, s.y - shape.y) < shape.size * 2
+          Math.hypot(s.x - shape.x, s.y - shape.y) < shape.size * 3
         );
         
         if (nearestShape) {
           ctx.beginPath();
           ctx.moveTo(shape.x, shape.y);
           ctx.lineTo(nearestShape.x, nearestShape.y);
-          ctx.strokeStyle = `rgba(255, 255, 255, ${shape.opacity * 0.5})`;
+          ctx.strokeStyle = `rgba(255, 255, 255, ${pulsingOpacity * 0.5})`;
           ctx.lineWidth = 0.5;
           ctx.stroke();
         }
       }
     };
     
+    let animationFrameId: number;
+    let startTime = Date.now();
+    
     const render = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      const currentTime = (Date.now() - startTime) / 1000;
       
       // Update and draw shapes
       shapes.forEach(shape => {
@@ -91,15 +101,18 @@ const CyberBackground = () => {
         if (shape.y < -shape.size) shape.y = canvas.height + shape.size;
         if (shape.y > canvas.height + shape.size) shape.y = -shape.size;
         
-        drawShape(ctx, shape);
+        drawShape(ctx, shape, currentTime);
       });
       
-      requestAnimationFrame(render);
+      animationFrameId = requestAnimationFrame(render);
     };
     
     render();
     
-    return () => window.removeEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      cancelAnimationFrame(animationFrameId);
+    };
   }, []);
   
   return (
